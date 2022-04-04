@@ -4,7 +4,7 @@ export default function DisplayTodo(props) {
             <ul>
                 {props.todos.map(item => (
                     <li key={item.id}>
-                    {item.task}
+                        {item.task}
                     </li>
                 ))}
             </ul>
