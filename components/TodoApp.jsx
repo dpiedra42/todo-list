@@ -18,10 +18,9 @@ export default function TodoApp() {
   
     return (
         <div>
-            <h1>What&apos;s there Todo?</h1>
+            <h1>What&apos;s there ToDo today?</h1>
             <TodoAdd addTodo={addTodo}/>
             <DisplayTodo todos={items}/>
-            {console.log(items)}
         </div>
     )
   }
