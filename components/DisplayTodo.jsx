@@ -10,6 +10,7 @@ export default function DisplayTodo(props) {
                           id={item.id}
                           completed={item.completed}
                           removeTodo={props.removeTodo}
+                          toggleComplete={props.toggleComplete}
                     />
                 ))}
             </div>

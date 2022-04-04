@@ -1,19 +1,13 @@
 import { useState } from 'react';
 
 export default function Todo(props) {
-    const [checked, setChecked] = useState(false);
-
-    const handleChange = () => {
-      setChecked(!checked);
-    };
-
     return(
         <div>
             <label>
                 <input type="checkbox" 
                        name={props.task} 
-                       checked={checked}
-                       onChange={handleChange}
+                       checked={props.completed}
+                       onChange={() => props.toggleComplete(props.id)}
                 />
                 {props.task}
             </label>

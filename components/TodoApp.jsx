@@ -28,11 +28,21 @@ export default function TodoApp() {
         setItems(updatedTodos);
     }
   
+    const toggleComplete = (todoId) => {
+        const updatedTodos = items.map(item => 
+            item.id === todoId ? {...item, completed: !item.completed } : item 
+        );
+        setItems(updatedTodos);
+    };
+
     return (
         <div>
             <h1>What&apos;s there ToDo today?</h1>
             <TodoAdd addTodo={addTodo}/>
-            <DisplayTodo todos={items} removeTodo={removeTodo}/>
+            <DisplayTodo todos={items} 
+                         removeTodo={removeTodo}
+                         toggleComplete={toggleComplete}
+            />
         </div>
     )
   }
