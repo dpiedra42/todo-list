@@ -1,13 +1,18 @@
+import Todo from './Todo';
+
 export default function DisplayTodo(props) {
     return(
         <div>
-            <ul>
+            <div>
                 {props.todos.map(item => (
-                    <li key={item.id}>
-                        {item.task}
-                    </li>
+                    <Todo key={item.id} 
+                          task={item.task} 
+                          id={item.id}
+                          completed={item.completed}
+                          removeTodo={props.removeTodo}
+                    />
                 ))}
-            </ul>
+            </div>
         </div>
     )
 }

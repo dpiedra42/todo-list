@@ -14,13 +14,25 @@ export default function TodoApp() {
             setItems([...items, {id: newid, task: newTodoText, completed: false }]);
     };
 
-    const increaseId = () => items.length;
+    const increaseId = () => {
+       const index = items.length - 1;
+       if (index < 0)
+        return 0;
+       const prevId = items[index].id;
+       const newId = prevId + 1;
+       return newId;
+    };
+
+    const removeTodo = (todoId) => {
+        const updatedTodos = items.filter(item => item.id !== todoId);
+        setItems(updatedTodos);
+    }
   
     return (
         <div>
             <h1>What&apos;s there ToDo today?</h1>
             <TodoAdd addTodo={addTodo}/>
-            <DisplayTodo todos={items}/>
+            <DisplayTodo todos={items} removeTodo={removeTodo}/>
         </div>
     )
   }
