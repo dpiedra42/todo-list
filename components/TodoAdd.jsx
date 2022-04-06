@@ -17,19 +17,28 @@ export default function TodoAdd({addTodo}) {
 }
 
 const AddTodo = styled.input`
-    width: 20vw;
-    height: 3vh;
+    width: 25vw;
+    height: 3.8vh;
     margin-right: 0.5vw;
     padding-left: 1vw;
     border: solid 0.2vw lightblue;
     border-radius: 1vw;
-    font-size: 1vw;
+    font-size: 1.2vw;
     font-family: 'Quicksand', sans-serif;
+
+    @media (max-width:780px)
+      {
+        font-size: 0.8rem;
+        width: 50vw;
+        height: 4vh;
+        border: solid 0.2rem lightblue;
+        border-radius: 1rem;
+      }
 `
 const SubmitButton = styled.button`
-    width: 3vw;
-    font-size: 1vw;
-    height: 3vh;
+    width: 3.8vw;
+    font-size: 1.2vw;
+    height: 3.8vh;
     background-color: lightblue;
     border: none;
     border-radius: 1vw;
@@ -38,4 +47,12 @@ const SubmitButton = styled.button`
     :hover {
         color: white;
     }
+
+    @media (max-width:780px)
+      {
+        width: 8vw;
+        font-size: 0.7rem;
+        height: 4vh;
+        border-radius: 0.8rem;
+      }
 `

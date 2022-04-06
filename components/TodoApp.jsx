@@ -38,7 +38,7 @@ export default function TodoApp() {
 
     return (
         <TodoAppContainer>
-            <Title>What&apos;s there ToDo today?</Title>
+            <Title>Your Daily ToDo List</Title>
             <Caption>A little list to help keep you organized throughtout the day!</Caption>
             <TodoAdd addTodo={addTodo}/>
             <DisplayTodo todos={items} 
@@ -56,30 +56,32 @@ export default function TodoApp() {
       background-color: white;
       height: 100vh;
       width: 50vw;
-      @media (min-width:320px)
+      @media (max-width:780px)
       {
         width: 90vw;
       }
   `
   const Title = styled.h1`
     margin: 0;
-    padding: 5vh 0 2vh 0;
+    padding: 5vh 0 5vh 0;
     font-size: 2.5vw;
+    text-decoration: underline;
 
-    @media (min-width:320px)
+    @media (max-width:780px)
       {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
       }
 `
   const Caption = styled.p`
       color: rgb(101, 101, 101);
       margin: 0;
       font-size: 1.2vw;
-      padding-bottom: 2vh;
+      padding-bottom: 3vh;
 
-      @media (min-width:320px)
+      @media (max-width:780px)
       {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
+        padding-bottom: 2.5vh;
       }
   `
   

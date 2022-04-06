@@ -1,9 +1,10 @@
 import Todo from './Todo';
+import styled from '@emotion/styled';
 
 export default function DisplayTodo(props) {
     return(
         <div>
-            <div>
+            <TodoDiv>
                 {props.todos.map(item => (
                     <Todo key={item.id} 
                           task={item.task} 
@@ -13,7 +14,16 @@ export default function DisplayTodo(props) {
                           toggleComplete={props.toggleComplete}
                     />
                 ))}
-            </div>
+            </TodoDiv>
         </div>
     )
 }
+
+const TodoDiv = styled.div`
+    padding: 2.5vw;
+
+    @media (max-width: 780px)
+    {
+        padding: 2rem
+    }
+`
