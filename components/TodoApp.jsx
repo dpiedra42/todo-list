@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import TodoAdd from './TodoAdd';
 import DisplayTodo from './DisplayTodo';
+import styled from '@emotion/styled';
 
 export default function TodoApp() {
     const [items, setItems] = useState([
@@ -36,14 +37,35 @@ export default function TodoApp() {
     };
 
     return (
-        <div>
-            <h1>What&apos;s there ToDo today?</h1>
+        <TodoAppContainer>
+            <Title>What&apos;s there ToDo today?</Title>
+            <Caption>A little list to help keep you organized throughtout the day!</Caption>
             <TodoAdd addTodo={addTodo}/>
             <DisplayTodo todos={items} 
                          removeTodo={removeTodo}
                          toggleComplete={toggleComplete}
             />
-        </div>
+        </TodoAppContainer>
     )
   }
+
+  const TodoAppContainer = styled.div`
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: white;
+      height: 100vh;
+      width: 50vw;
+  `
+  const Title = styled.h1`
+    margin: 0;
+    padding: 5vh 0 2vh 0;
+    font-size: 2.5vw;
+`
+  const Caption = styled.p`
+      color: rgb(101, 101, 101);
+      margin: 0;
+      font-size: 1.2vw;
+      padding-bottom: 2vh;
+  `
   
