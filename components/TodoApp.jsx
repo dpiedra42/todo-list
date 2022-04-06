@@ -56,16 +56,30 @@ export default function TodoApp() {
       background-color: white;
       height: 100vh;
       width: 50vw;
+      @media (min-width:320px)
+      {
+        width: 90vw;
+      }
   `
   const Title = styled.h1`
     margin: 0;
     padding: 5vh 0 2vh 0;
     font-size: 2.5vw;
+
+    @media (min-width:320px)
+      {
+        font-size: 1.5rem;
+      }
 `
   const Caption = styled.p`
       color: rgb(101, 101, 101);
       margin: 0;
       font-size: 1.2vw;
       padding-bottom: 2vh;
+
+      @media (min-width:320px)
+      {
+        font-size: 0.7rem;
+      }
   `
   
