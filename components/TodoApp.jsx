@@ -65,6 +65,7 @@ export default function TodoApp() {
     margin: 0;
     padding: 5vh 0 5vh 0;
     font-size: 2.5vw;
+    color: rgb(53, 30, 41);
     text-decoration: underline;
 
     @media (max-width:780px)
@@ -73,7 +74,7 @@ export default function TodoApp() {
       }
 `
   const Caption = styled.p`
-      color: rgb(101, 101, 101);
+      color: rgb(53, 30, 41);;
       margin: 0;
       font-size: 1.2vw;
       padding-bottom: 3vh;

@@ -23,7 +23,8 @@ export default function Todo(props) {
 const TaskContainer = styled.div`
     margin-bottom: 2vh;
     padding: 0.5vw;
-    background-color: rgb(220, 188, 247);
+    background-color: rgb(109, 211, 206);
+    //200, 233, 160  247, 162,120 109, 211, 206
     border-radius: 0.8vw;
     width: 40vw;
     display: flex;
