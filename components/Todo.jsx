@@ -15,20 +15,22 @@ export default function Todo(props) {
                 </Task>
             </TaskDiv>
             <ButtonDiv>
-                <DeleteButton type='button' onClick={() => props.removeTodo(props.id)}>Delete</DeleteButton>
+                <DeleteButton type='button' onClick={() => props.removeTodo(props.id)}>Remove</DeleteButton>
             </ButtonDiv>
         </TaskContainer>
     )
 }
 const TaskContainer = styled.div`
-    padding-bottom: 2vh;
+    margin-bottom: 2vh;
+    padding: 0.5vw;
+    background-color: rgb(220, 188, 247);
+    border-radius: 0.8vw;
     width: 40vw;
     display: flex;
     justify-content: space-between;
 `
 const TaskDiv = styled.div`
     width: 70%;
-    background-color: #ffc1cb;
     border-radius: 0.5vw;
 `
 const InputBox = styled.input`
@@ -49,6 +51,7 @@ const DeleteButton = styled.button`
     height: 4vh;
     font-size: 1.9vh;
     border: none;
-    background-color: #cbecaa;
     border-radius: 0.5vw;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
 `
