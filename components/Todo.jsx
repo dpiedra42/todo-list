@@ -28,6 +28,14 @@ const TaskContainer = styled.div`
     width: 40vw;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 780px)
+    {
+        width: 60vw;
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+        border-radius: 1rem;
+    }
 `
 const TaskDiv = styled.div`
     width: 70%;
@@ -37,10 +45,21 @@ const InputBox = styled.input`
     margin-right: 1vw;
     width: 1vw;
     height: 1.9vh;
+
+    @media (max-width: 780px)
+    {
+        width: 1rem;
+    }
 `
 const Task = styled.label`
     font-size: 1.5vw;
     padding-right: 1.5vw;
+
+    @media (max-width: 780px)
+    {
+       padding-right: 0;
+       font-size: 1rem;
+    }
 `
 const ButtonDiv = styled.div`
     width: 30%;
@@ -54,4 +73,9 @@ const DeleteButton = styled.button`
     border-radius: 0.5vw;
     font-family: 'Quicksand', sans-serif;
     font-weight: 500;
+
+    @media (max-width: 780px)
+    {
+       border-radius: 0.5rem;
+    }
 `
