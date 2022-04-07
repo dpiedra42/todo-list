@@ -21,7 +21,7 @@ const AddTodo = styled.input`
     height: 3.8vh;
     margin-right: 0.5vw;
     padding-left: 1vw;
-    border: solid 0.2vw lightblue;
+    border: solid 0.2vw rgb(133, 214, 241);
     border-radius: 1vw;
     font-size: 1.2vw;
     font-family: 'Quicksand', sans-serif;
@@ -31,7 +31,7 @@ const AddTodo = styled.input`
         font-size: 0.8rem;
         width: 50vw;
         height: 4vh;
-        border: solid 0.2rem lightblue;
+        border: solid 0.2rem rgb(133, 214, 241);
         border-radius: 1rem;
       }
 `
@@ -39,7 +39,7 @@ const SubmitButton = styled.button`
     width: 3.8vw;
     font-size: 1.2vw;
     height: 3.8vh;
-    background-color: lightblue;
+    background-color: rgb(133, 214, 241);
     border: none;
     border-radius: 1vw;
     font-family: 'Quicksand', sans-serif;
