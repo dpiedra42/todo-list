@@ -2,14 +2,8 @@ import { useState } from 'react';
 import styled from '@emotion/styled';
 
 export default function Todo(props) {
-    const colors = [
-        'rgb(109, 211, 206)', 
-        'rgb(200, 233, 160)', 
-        'rgb(247, 162,120)'
-    ];
-
     return(
-        <TaskContainer BackColor={colors[Math.floor(Math.random() * colors.length)]}>
+        <TaskContainer BackColor={props.backColor}>
             <TaskDiv>
                 <Task>
                     <InputBox type="checkbox" 

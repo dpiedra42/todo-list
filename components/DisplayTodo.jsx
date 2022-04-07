@@ -9,6 +9,7 @@ export default function DisplayTodo(props) {
                     <Todo key={item.id} 
                           task={item.task} 
                           id={item.id}
+                          backColor={item.color}
                           completed={item.completed}
                           removeTodo={props.removeTodo}
                           toggleComplete={props.toggleComplete}

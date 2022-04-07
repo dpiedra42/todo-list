@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import TodoApp from '../components/TodoApp';
+import dynamic from "next/dynamic";
+const TodoApp = dynamic(() => import("../components/TodoApp"), { ssr: false });
 
 export default function Home() {
   return (

@@ -1,18 +1,27 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import TodoAdd from './TodoAdd';
 import DisplayTodo from './DisplayTodo';
 import styled from '@emotion/styled';
 
 export default function TodoApp() {
-    const [items, setItems] = useState([
-      {id: 0, task: "buy milk", completed: false},
-      {id: 1, task: "buy eggs", completed: false}
-    ]);
-  
+    const initialTodos = JSON.parse(window.localStorage.getItem("items") || "[]");
+    const [items, setItems] = useState(initialTodos);
+    
+    useEffect(()=>{
+      window.localStorage.setItem("items", JSON.stringify(items))
+    }, [items]);
+
     const addTodo = (newTodoText) => {
-        let newid = increaseId();
-        if (newTodoText)
-            setItems([...items, {id: newid, task: newTodoText, completed: false }]);
+      const colors = [
+          'rgb(109, 211, 206)', 
+          'rgb(200, 233, 160)', 
+          'rgb(247, 162, 120)'
+      ];
+
+      let newid = increaseId();
+      let backColor = colors[Math.floor(Math.random() * colors.length)];
+      if (newTodoText)
+          setItems([...items, {id: newid, task: newTodoText, completed: false, color: backColor}]);
     };
 
     const increaseId = () => {
